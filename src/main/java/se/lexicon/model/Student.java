@@ -19,7 +19,7 @@ public class Student {
 
     // Getters
 
-    public int getNextId() {
+    public static int getNextId() {
         return ++personIdCounter;
     }
 
