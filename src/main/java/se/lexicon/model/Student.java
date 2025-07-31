@@ -38,7 +38,7 @@ public class Student {
     // Setter
 
 
-    public void setName(String name) {
+    private void setName(String name) {
 
         if (name == null|| name.trim().isEmpty()){
             throw new IllegalArgumentException("Name cannot be null or empty");
@@ -47,7 +47,7 @@ public class Student {
         this.name = name;
     }
 
-    public void setEmail(String email) {
+    private void setEmail(String email) {
 
         if (email == null|| email.trim().isEmpty()){
             throw new IllegalArgumentException("Email cannot be null or empty");
@@ -56,7 +56,7 @@ public class Student {
         this.email = email;
     }
 
-    public void setAddress(String address) {
+    private void setAddress(String address) {
 
         if (address == null|| address.trim().isEmpty()){
             throw new IllegalArgumentException("Adress cannot be null or empty");
