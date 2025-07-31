@@ -8,11 +8,11 @@ public interface StudentDAO {
 
     Student save (Student student);
 
-    Student findByEmail (Student email);
+    Student findByEmail (String email);
 
-    List<Student> findByName(Student name);
+    List<Student> findByName(String name);
 
-    Student findById (Student id);
+    Student findById (Integer id);
 
     List<Student> findAll();
 
