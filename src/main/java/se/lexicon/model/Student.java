@@ -10,7 +10,7 @@ public class Student {
     private String address;
 
     public Student(String name, String email, String address) {
-        this.id = getNextId();
+        this.id = ++personIdCounter;
         setName(name);
         setEmail(email);
         setAddress(address);
@@ -19,8 +19,9 @@ public class Student {
 
     // Getters
 
-    public static int getNextId() {
-        return ++personIdCounter;
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
@@ -59,9 +60,14 @@ public class Student {
     private void setAddress(String address) {
 
         if (address == null|| address.trim().isEmpty()){
-            throw new IllegalArgumentException("Adress cannot be null or empty");
+            throw new IllegalArgumentException("Address cannot be null or empty");
         }
 
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Student id= " + id + ", name= " + name + ", email= " + email;
     }
 }

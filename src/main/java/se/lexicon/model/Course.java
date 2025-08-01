@@ -16,7 +16,7 @@ public class Course {
 
     public Course(String courseName, LocalDate startDate, int weekDuration) {
 
-        this.id = getNextId();
+        this.id = ++courseCounter;
         this.courseName = courseName;
         this.startDate = startDate;
         this.weekDuration = weekDuration;
@@ -27,9 +27,8 @@ public class Course {
     // Getter
 
 
-    public static int getNextId() {
-
-        return ++courseCounter;
+    public int getId (){
+        return id;
     }
 
     public String getCourseName() {
@@ -104,9 +103,22 @@ public class Course {
 
     }
 
-    // Testing Utilities
-
-    public int getId (){
-        return id;
+    @Override
+    public String toString() {
+        return "Course id=" + id + ", courseName= " + courseName + ", startDate=" + startDate + ", weekDuration=" + weekDuration + " weeks" +
+                ", studentsCount=" + students.size();
     }
+
+    public String coursesStudentsToString() {
+        if (students.isEmpty()) {
+            return "No students are enrolled in this course.";
+        }
+
+        StringBuilder courseStudents = new StringBuilder("Enrolled students:\n");
+        for (Student student : students) {
+            courseStudents.append(" - ").append(student).append("\n");
+        }
+        return courseStudents.toString();
+    }
+
 }

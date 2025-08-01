@@ -11,11 +11,11 @@ public interface CourseDOA {
 
     Course save (Course course);
 
-    Course findById(Course course);
+    Course findById(Integer course);
 
-    List<Course> findByName(Course course);
+    List<Course> findByName(String course);
 
-    List<Course> findByDate(Course course);
+    List<Course> findByDate(LocalDate course);
 
     List<Course> findAll();
 
