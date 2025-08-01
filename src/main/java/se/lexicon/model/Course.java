@@ -17,9 +17,9 @@ public class Course {
     public Course(String courseName, LocalDate startDate, int weekDuration) {
 
         this.id = ++courseCounter;
-        this.courseName = courseName;
-        this.startDate = startDate;
-        this.weekDuration = weekDuration;
+        setCourseName(courseName);
+        setStartDate(startDate);
+        setWeekDuration(weekDuration);
         this.students = new ArrayList<>();
 
     }
