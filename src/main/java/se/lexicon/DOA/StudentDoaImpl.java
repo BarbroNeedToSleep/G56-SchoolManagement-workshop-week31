@@ -19,6 +19,9 @@ public class StudentDoaImpl implements StudentDAO {
 
         if (!students.contains(student)) {
             students.add(student);
+            System.out.println("Student saved: " + student);
+        }else {
+            System.out.println("Student already exists: " + student);
         }
 
         return student;
