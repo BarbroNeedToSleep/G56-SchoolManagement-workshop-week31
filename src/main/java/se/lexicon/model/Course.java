@@ -105,8 +105,8 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course id=" + id + ", courseName= " + courseName + ", startDate=" + startDate + ", weekDuration=" + weekDuration + " weeks" +
-                ", studentsCount=" + students.size();
+        return "Course id= " + id + ", course name= " + courseName + ", Starting date=" + startDate + ", Week duration=" + weekDuration + " weeks" +
+                ", Students Count=" + students.size();
     }
 
     public String coursesStudentsToString() {
